@@ -9,12 +9,15 @@
     <title>Album example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
-    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./assets/angular.min.js"></script>
     <script src="./app.js"></script>
+    <script src="./collection/collection.module.js"></script>
+    <script src="./bandeau/bandeau.module.js"></script>
+    <script src="./detail/detail.module.js"></script>
   </head>
 
   <body>
@@ -22,9 +25,9 @@
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
-          <div class="row">
+          <div class="row" >
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
+              <h4 class="text-white">Test</h4>
               <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
@@ -51,11 +54,11 @@
       </div>
     </header>
 
-    <main role="main" ng-controller="Index">
+    <main role="main">
 
-      <section class="jumbotron text-center">
+      <section class="jumbotron text-center" ng-controller="bandeau">
         <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
+          <h1 class="jumbotron-heading">{{ titre }}</h1>
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
@@ -64,7 +67,7 @@
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
+      <div class="album py-5 bg-light" ng-controller="Index">
         <div class="container">
 
           <div class="row">
@@ -86,7 +89,7 @@
           </div>
         </div>
       </div>
-
+      <detail-game></detail-game>
     </main>
 
     <footer class="text-muted">
@@ -104,7 +107,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   </body>
 </html>
