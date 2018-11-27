@@ -3,11 +3,11 @@ angular.module('app')
         function config($routeProvider) {
         $routeProvider.
             when('/liste-games', {
-            template: '<collection></collection>'
+            template: '<collection-jeux></collection-jeux>'
             }).
             when('/jeu/:jeuId', {
             template: '<detail-game></detail-game>'
             }).
-            otherwise('/listes-games');
+            otherwise('/liste-games');
         }
     ]);
