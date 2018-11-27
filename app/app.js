@@ -1,1 +1,1 @@
-angular.module("app",["collectionJeux", "bandeauHeader","detailGame"]);
+angular.module("app",["collectionJeux", "bandeauHeader","detailGame","formGame"]);

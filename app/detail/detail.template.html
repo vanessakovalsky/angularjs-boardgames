@@ -1,4 +1,7 @@
-<div class="jeu">
+<div class="jeu col-sm-4">
+    <img src="{{ $ctrl.data.image}}" width="200" />
     {{ $ctrl.data.description }}
-    {{ $ctrl.editeur }}
+    {{ $ctrl.data.editeur }}
+    <button ng-click="$ctrl.showForm()" value="Modifier">Modifier</button>
+    <form-game ng-show="$ctrl.isVisible"></form-game>
 </div>
