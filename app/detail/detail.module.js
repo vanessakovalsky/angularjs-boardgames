@@ -1,12 +1,11 @@
-angular.module("detailGame",[])
+angular.module("detailGame",["ngRoute"])
     .component("detailGame", {
         templateUrl :  'detail/detail.template.html',
         bindings: {
             data: '<'
         },
-        controller: function($rootScope){
-            this.editeur = "Asmodee";
-            this.titre2 = $rootScope.titre;
+        controller: ['$routeParams', function($routeParams){
+            this.idJeu = $routeParams.jeuId;
             this.isVisible = false;
             this.showForm =  function(){
                 if (this.isVisible == false) {
@@ -16,5 +15,5 @@ angular.module("detailGame",[])
                     this.isVisible = false;
                 }
             }
-        }
+        }]
     })

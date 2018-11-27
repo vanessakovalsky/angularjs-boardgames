@@ -11,3 +11,7 @@ angular.module('app')
             otherwise('/liste-games');
         }
     ]);
+
+/*angular.module('app').config(['$localStorageProvider', function($localStorageProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('!');
+}]);*/
