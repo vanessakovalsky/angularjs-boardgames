@@ -1,4 +1,4 @@
 angular.module('bandeauHeader',[])
-    .controller('bandeau', function($scope){
-        $scope.titre =  'Titre';
+    .controller('bandeau', function($rootScope){
+        $rootScope.titre =  'Titre';
     })
