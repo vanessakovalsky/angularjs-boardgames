@@ -3,5 +3,5 @@
     {{ $ctrl.data.description }}
     {{ $ctrl.data.editeur }}
     <button ng-click="$ctrl.showForm()" value="Modifier">Modifier</button>
-    <form-game ng-show="$ctrl.isVisible"></form-game>
+    <form-game ng-show="$ctrl.isVisible" jeu="$ctrl.data"></form-game>
 </div>
