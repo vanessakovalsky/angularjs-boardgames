@@ -5,5 +5,11 @@ angular.module('formGame',[])
             jeu : '<'
         },
         controller: function(){
+            this.SubmitJeu = function(){
+                console.log('formulaire soumis');
+                console.log(this.jeu);
+                $http.post('/jeu/:id', $jeu);
+
+            }
         }
     })

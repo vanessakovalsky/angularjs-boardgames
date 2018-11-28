@@ -1,4 +1,16 @@
-<form>
-    Titre : <input type="text" value="{{ $ctrl.jeu.description }} " /> 
-    Description : <input type="text" />
+<form novalidate name="formJeu" ng-submit="$ctrl.SubmitJeu()">
+    Titre : {{$ctrl.jeu.titre}} <br />
+    <input type="text" required ng-model="$ctrl.jeu.titre" name="jtitre" /> 
+    <div ng-show="formJeu.$submitted || formJeu.jtitre.$touched">
+        <div ng-show="formJeu.jtitre.$error.required">
+            Le champ titre est obligatoire
+        </div>
+    </div>
+    Description : <input type="text" ng-model="$ctrl.jeu.description" name="jdescription" minlength="20" />
+    <div ng-show="formJeu.$submitted || formJeu.jdescription.$touched">
+        <div ng-show="formJeu.jdescription.$error.minlength">
+            Le champs doit faire au moins 20 caractères.
+        </div>
+    </div>
+    <input type="submit" value="Enregistrer" />
 </form>
