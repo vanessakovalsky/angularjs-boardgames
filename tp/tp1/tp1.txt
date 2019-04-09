@@ -1,0 +1,17 @@
+== TP 1 ==
+
+- Nous allons créer une application Angular pour KingoLudo
+- Pour cela nous allons repartir du template html présent ici : https://github.com/vanessakovalsky/html-css 
+- Intégrer à ce template une application angular (créer un package.json, créer un controller pour l'index, le detail et la liste de jeux)
+- Découper en controlleur les différentes parties de la page
+-- Navigation
+-- Footer 
+-- Vignette
+-- Liste de jeux 
+-- Header 
+-- Accueil 
+-- Formulaire creation de jeux
+-- Formulaire creation utilisateur
+-- Formulaire de connexion
+-- Formulaire de contact 
+- Dans le controller de navigation, remplacer la liste par une directive ng-repeat

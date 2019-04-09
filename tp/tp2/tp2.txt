@@ -1,0 +1,19 @@
+== Tp 2 - Création de vue et de module ==
+
+- Pour chaque élément nous allons créer un module et un template
+- Pour cela, déclarer les modules suivants dans app.js
+-- Navigation
+-- Footer 
+-- Vignette
+-- Liste de jeux 
+-- Header 
+-- Accueil 
+-- Formulaire creation de jeux
+-- Formulaire creation utilisateur
+-- Formulaire de connexion
+-- Formulaire de contact 
+- Puis créer un dossier pour chaque module à la racine de app 
+- Dans chaque dossier, créer un fichier nomdudossier.module.js (pour déclarer le module)
+- Dans chaque dossier, créer un fichier nomdudossier.template.html (pour ajouter le template correspondant)
+- dans app.js, appeler les différents modules créés
+- dans index.html, appeler les différents templates 
