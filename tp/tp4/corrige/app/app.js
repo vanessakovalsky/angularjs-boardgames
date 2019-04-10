@@ -10,7 +10,8 @@ var app = angular.module("app",
         "creerjeu",
         "contact",
         "creeruser",
-        "connexion"
+        "connexion",
+        "affichageJeu"
     ]);
 
     app.config(function($stateProvider) {
@@ -49,6 +50,36 @@ var app = angular.module("app",
             url: '/connexion',
             component: 'connexion'
         }
+
+        var jeuState = { 
+            name: 'listejeux.jeu', 
+            url: '/{jeuId}', 
+            component: 'affichageJeu',
+            resolve: {
+              jeu: function( $stateParams) {
+                var jeu_id = $stateParams.jeuId;
+                if(jeu_id == 1){
+                    var jeu = {
+                        id : '1',
+                        name : 'Kingdomino'
+                    };
+                }
+                else if (jeu_id == 2){
+                    var jeu = {
+                        id : '2',
+                        name : 'Splendor'
+                    };
+                }
+                else {
+                    var jeu = {
+                        id : '3',
+                        name : 'Zombicide'
+                    };
+                }
+                return jeu;
+              }
+            }
+          }
       
         $stateProvider.state(helloState);
         $stateProvider.state(listeState);
@@ -56,4 +87,6 @@ var app = angular.module("app",
         $stateProvider.state(contactState);
         $stateProvider.state(creeruserState);
         $stateProvider.state(connexionState);
+        $stateProvider.state(jeuState);
+
       });

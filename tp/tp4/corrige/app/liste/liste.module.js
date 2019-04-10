@@ -3,18 +3,21 @@ angular.module("liste",[])
         templateUrl: 'liste/liste.template.html',
         controller: function ListeController(){
             var vm = this;
-            vm.games = {
-                '0' : 
+            vm.games = [
                     {
-                        'id' : '1',
-                        'name' : 'Kingdomino'
+                        id : '1',
+                        name : 'Kingdomino'
                     },
-                '1' : 
                     {
-                        'id' : "2",
-                        'name' : "Splendor"
+                        id : "2",
+                        name : "Splendor"
+                    },
+                    {
+                        id : "3",
+                        name : "Zombicide"
                     }
-            }
+            ]
+            console.log(vm.games);
             vm.entete = {
                 titre: "Liste des jeux",
                 texte: "Se connecter pour accéder à l'espace privé",

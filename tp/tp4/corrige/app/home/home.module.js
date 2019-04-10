@@ -19,6 +19,7 @@ angular.module("home",[])
                 titre: "Accueil",
                 texte: "Se connecter pour accéder à l'espace privé",
                 bouton: "Participez à notre aventure"
-            };        }
+            };        
+        }
     }
     )

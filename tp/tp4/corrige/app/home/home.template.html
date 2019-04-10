@@ -1,6 +1,6 @@
 <entete data="$ctrl.entete"></entete>
 <div class="row text-center">
     <div class="col-lg-3 col-md-6 mb-4" ng-repeat="(key, value) in $ctrl.games">
-        <game-card></game-card>
+        <game-card {{value}}></game-card>
     </div>
 </div>
