@@ -1,0 +1,15 @@
+== TP 4 ==
+
+- On va rendre dynamique l'entete, 
+-- pour cela dans le entete.module.js 
+on va ajouter le binding des données dans le controlleur
+-- Puis au niveau du template de l'entête utilisée les données bindées
+-- Au niveau des templates qui appelle l'entete, on ajoute les données à passer
+-- Dans les controlleurs liées au template parent, définir le contenu des données 
+- On va également lié le tableau des jeux à la fiche des jeux
+-- Ajouter le binding de données dans le composant gameCard
+-- Dans le template de liste, ajouter les données à passer à la ligne (objet jeu depuis le tableau)
+- On va également prévoir un affichage d'un détail d'un jeu
+-- Créer un composant affichageJeu 
+-- déclarer le routing avec un paramètre 
+-- Depuis la liste, ajouter un lien vers le routing dynamique (dépend de l'id de la ligne sur laquelle on se trouve)
