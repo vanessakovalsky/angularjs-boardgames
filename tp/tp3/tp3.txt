@@ -1,2 +1,14 @@
 == TP 3 ==
 
+- Utiliser le CDN : <script src="//unpkg.com/@uirouter/angularjs@1.0.7/release/angular-ui-router.min.js"></script> pour inclure le script, et le module s'appele ui.router
+- Créer des routes pour accéder aux éléments suivants :
+-- Accueil
+-- Liste des jeux
+-- Détail d'un jeu 
+-- Créer un jeu
+-- Créer un utilisateur
+-- Connexion
+-- Contact
+- Cela nécessite de déclarer les etats avec les composants dans le app.js
+- Ainsi que de créer les composants manquants
+- Il faut aussi penser à ajouter le ui-view dans index.html
