@@ -1,17 +1,32 @@
 <entete data="$ctrl.entete"></entete>
 {{ $ctrl.jeu.name }}
-<form method="POST" enctype="multipart/form-data" ng-submit="$ctrl.submitJeu()">
+<form method="POST" enctype="multipart/form-data" name="formJeu" ng-submit="$ctrl.submitJeu()">
   <div class="form-group">
     <label for="nom_jeu">Nom du jeu</label>
-    <input type="text" ng-model="$ctrl.jeu.name" placeholder="Saisir le nom du jeu" name="nom_jeu" class="form-control"          >
+    <input type="text" ng-model="$ctrl.jeu.name" required placeholder="Saisir le nom du jeu" name="nom_jeu" class="form-control"          >
+    <div ng-show="formJeu.$submitted || formJeu.nom_jeu.$touched">
+      <div ng-show="formJeu.nom_jeu.$error.required">
+          Le champ nom du jeu est obligatoire
+      </div>
+  </div>
   </div>
   <div class="form-group">
     <label for="editeur">Editeur</label>
-    <input type="text" name="editeur" class="form-control">
+    <input type="text" ng-model="$ctrl.jeu.editor" required name="editeur" class="form-control">
+    <div ng-show="formJeu.$submitted || formJeu.editeur.$touched">
+      <div ng-show="formJeu.editeur.$error.required">
+          Le champ editeur est obligatoire
+      </div>
+  </div>
   </div>
   <div class="form-group">
     <label for="annee">Année de sortie</label>
-    <input type="text" name="annee" class="form-control">
+    <input type="text" ng-model="$ctrl.jeu.annee" minlength="4" maxlength="4" name="annee" class="form-control">
+    <div ng-show="formJeu.$submitted || formJeu.annee.$touched">
+      <div ng-show="formJeu.annee.$error.minlength">
+          Le champ annee comporte 4 chiffre
+      </div>
+  </div>
   </div>
   <div class="form-group">
     <label for="image">Image</label>
@@ -43,7 +58,6 @@
     <label for="commentaire">Commentaire</label>
     <textarea class="form-control" name="commentaire" rows="3"></textarea>
   </div>
-<input type="email" />
   <input type="submit" name="envoyer" class="btn btn-primary mb-2">
   </input>
 </form>
