@@ -18,6 +18,10 @@
 
     <script src="./assets/angular.min.js"></script>
     <script src="navigation/navigation.module.js"></script>
+    <script src="entete/entete.module.js"></script>
+    <script src="footer/footer.module.js"></script>
+    <script src="gamecard/gamecard.module.js"></script>
+    <script src="home/home.module.js"></script>
     <script src="app.js"></script>
 
   </head>
@@ -28,83 +32,14 @@
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Jumbotron Header -->
-      <header class="jumbotron my-4">
-        <h1 class="display-3">Toto</h1>
-        <p class="lead">Bienvenue sur le site de notre ludothèque<br />
-		Vous trouverez la liste des jeux et des joueurs</p>
-        <a href="#" class="btn btn-primary btn-lg">Participer à notre aventure</a>
-      </header>
+      <entete></entete>
 
       <!-- Page Features -->
-      <div class="row text-center">
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="img/kingdomino.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Kingdomino</h4>
-              <p class="card-text">Ceci est un super jeu</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Voir le jeu</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="img/kingdomino.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Kingdomino</h4>
-              <p class="card-text">Ceci est un super jeu</p>
-            </div>
-            <div class="card-footer">
-              <a href="afficher_jeu.html" class="btn btn-primary">Voir le jeu</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="img/kingdomino.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Kingdomino</h4>
-              <p class="card-text">Ceci est un super jeu</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Voir le jeu</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="img/kingdomino.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Kingdomino</h4>
-              <p class="card-text">Ceci est un super jeu</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Voir le jeu</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-
+      <home></home>
     </div>
     <!-- /.container -->
 
-	<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Pied de page</p>
-  </div>
-  <!-- /.container -->
-</footer>
+<footer-bis></footer-bis>
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
