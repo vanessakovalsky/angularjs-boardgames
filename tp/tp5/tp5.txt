@@ -1,0 +1,18 @@
+== TP 5 ==
+
+- On va rendre dynamique le formulaire de creation de jeu, 
+-- pour cela dans le creerjeu.module.js, on déclare un objet jeu vide
+ainsi qu'une fonction de soumission du formulaire dans le controlleur
+-- Puis au niveau du template on ajoute l'option ng-model sur chacun des champs,
+ainsi que l'option ng-submit sur la balise form (en appelant la fonction créé dans le controleur et en supprimant l'action du formulaire)
+-- Appeler à côté du formulaire l'affichage du détail d'un jeu qui doit être mis à jour
+automatiquement avec les données saisies (pour prévisualiser)
+- On va aussi gérer les erreurs sur le formulaires
+-- Supprimer la validation HTML des champs avec l'attribut novalidate
+-- Ajouter l'option required sur les champs obligatoires
+-- Gérer l'affichage des erreurs avec ng-show et ng-hide sur les champs
+-- Ajouter une longueur minium de 3 caractere sur le nom du jeu et l'editeur
+-- Ajouter une longueur requise de 4 caractères sur l'année de sortie du jeu 
+- Ajouter une fonction de soumission sur les autres formulaires (contact, crée utilisateur, connexion)
+- Si l'utilisateur est connecté masquer le lien de deconnexion (nécessite de définir au niveau du rootScope une variable pour savoir si l'utilisateur est connecté)
+- Sur la liste des jeux (sous forme de tableau), donner la possibilité au click d'éditer une ligne (formulaire + ng-show à créer)
