@@ -1,5 +1,6 @@
 var app = angular.module("app",
     [
+        "restangular",
         "ui.router",
         "navigation",
         "entete",
@@ -56,26 +57,15 @@ var app = angular.module("app",
             url: '/{jeuId}', 
             component: 'affichageJeu',
             resolve: {
-              jeu: function( $stateParams) {
+              jeu: function( $stateParams, Restangular) {
                 var jeu_id = $stateParams.jeuId;
-                if(jeu_id == 1){
-                    var jeu = {
-                        id : '1',
-                        name : 'Kingdomino'
-                    };
+                Restangular.setBaseUrl('https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0');
+                getGame = function($jeu_id){
+                    var url = '/boardgame/';
+                    var game = Restangular.one(url,jeu_id).get();
+                    return game;
                 }
-                else if (jeu_id == 2){
-                    var jeu = {
-                        id : '2',
-                        name : 'Splendor'
-                    };
-                }
-                else {
-                    var jeu = {
-                        id : '3',
-                        name : 'Zombicide'
-                    };
-                }
+                var jeu = getGame().$object;
                 return jeu;
               }
             }

@@ -14,8 +14,8 @@
           <tr ng-repeat="jeu in $ctrl.games">
               <td>{{jeu.id}}</td>
               <td> <a ui-sref="listejeux.jeu({ jeuId: jeu.id })">{{jeu.name}}</a></td>
+              <td>{{jeu.editor}}</td>
               <td>Familiale</td>
-              <td>Blue Orance</td>
               <td><a href="creer_jeu.html?id=1">Modifier le jeu</a></td>
               <td><a href="delete_jeu.html?id=1">Supprimer le jeu</a></td>
           </tr>

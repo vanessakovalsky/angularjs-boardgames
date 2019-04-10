@@ -3,6 +3,7 @@
 - On va appeler à l'aide de web services les données sur les jeux
 -- Ajouter restangular à vos modules (dans app.js)
 -- Appeler le script de restangular depuis index.html : <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.1/restangular.js"></script>
+-- Restangular a besoin de Lodash pour fonctionner, il faut ajouter le script si vous passez pas le CDN :     <script src="https://cdn.jsdelivr.net/npm/lodash@3.10.1/index.min.js"></script>
 -- Dans le controller de la liste, injecter RestAngular comme services
 -- Definir la base url de restAngular avec la fonction setBaseURL sur l'url : https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0
 -- Définir une fonction getJeux qui appelle en Get le WS : boardgame/findByStatus?status=available&status=pending&status=sold 
