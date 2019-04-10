@@ -4,11 +4,12 @@ angular.module("navigation",[])
         controller: function NavController(){
             var vm = this;
             vm.menu = {
-                'accueil' : 'accueil',
-                'liste des jeux' : 'listejeux',
-                'crééer un jeu' : 'creerjeu',
-                'crééer un user' : 'creeruser',
-                'contact' : 'contact'
+                'Accueil' : 'accueil',
+                'Liste des jeux' : 'listejeux',
+                'Créér un jeu' : 'creerjeu',
+                'Créér un user' : 'creeruser',
+                'Contact' : 'contact',
+                'Connexion' : 'connexion'
             };
         }
     }
