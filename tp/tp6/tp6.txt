@@ -1,0 +1,19 @@
+== TP 6 ==
+
+- On va appeler à l'aide de web services les données sur les jeux
+-- Ajouter restangular à vos modules (dans app.js)
+-- Appeler le script de restangular depuis index.html : <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.1/restangular.js"></script>
+-- Dans le controller de la liste, injecter RestAngular comme services
+-- Definir la base url de restAngular avec la fonction setBaseURL sur l'url : https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0
+-- Définir une fonction getJeux qui appelle en Get le WS : boardgame/findByStatus?status=available&status=pending&status=sold 
+-- Cette fonction vient alimenter la variable vm.games pour afficher les jeux en provenance du web services
+- On va appeler à l'aide d'un WS les données sur un jeu
+-- Dans le controller CardGame et dans le AffichageJeu, injecter Restangular
+-- Definir la base url de restAngular avec la fonction setBaseURL sur l'url : https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0
+-- Définir une fonction getJeu(id) qui appelle en GET le WS : boardgame/{idJeu}
+-- Utiliser le jeu obtenu pour afficher les données dans le template
+- On va envoyer les données saisies dans le formulaire de création d'un jeu à un WS
+-- Dans le controller creerjeu injecter Restangular
+-- Definir la base url de restAngular avec la fonction setBaseURL sur l'url : https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0
+-- Définir une fonction postJeu(jeu) qui appelle en POST le WS : boardgame/{idJeu}
+-- Appeler la fonction postJeu dans le submit
