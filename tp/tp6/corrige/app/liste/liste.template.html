@@ -1,4 +1,5 @@
 <entete data="$ctrl.entete"></entete>
+Recherche: <input ng-model="$ctrl.query" />
 <table id="liste-jeux" class="table table-striped">
         <thead>
           <tr>
@@ -11,7 +12,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="jeu in $ctrl.games">
+          <tr ng-repeat="jeu in $ctrl.games | filter:$ctrl.query">
               <td>{{jeu.id}}</td>
               <td> <a ui-sref="listejeux.jeu({ jeuId: jeu.id })">{{jeu.name}}</a></td>
               <td>{{jeu.editor}}</td>
