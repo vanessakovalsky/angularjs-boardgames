@@ -1,7 +1,7 @@
 angular.module("creerjeu",[])
     .component("creerjeu", {
         templateUrl: 'creerjeu/creerjeu.template.html',
-        controller: function CreerJeuController(Restangular){
+        controller: function CreerJeuController(jeuService){
             var vm = this;
             vm.entete = {
                 titre: "Créer une fiche jeu",
@@ -12,7 +12,6 @@ angular.module("creerjeu",[])
                 name: '',
                 editor: ''
             };
-            console.log(vm.jeu.name);
 
             vm.submitJeu = function(){
                 console.log('formulaire soumis');
@@ -25,16 +24,8 @@ angular.module("creerjeu",[])
                     "time": "60min",
                     "number_player": "2-5"
                 }
-                Restangular.setBaseUrl('https://virtserver.swaggerhub.com/vanessakovalsky/BoardGames/1.0.0');
-                var postGame = function(nouveau_jeu){  
-                    var games = Restangular.all('/boardgame');
-                    new_game = games.post(nouveau_jeu).then(function() {
-                        console.log("Object saved OK");
-                      }, function() {
-                        console.log("There was an error saving");
-                      });
-                }
-                postGame();
+
+                jeuService.postGame(nouveau_jeu);
             }
         }
     }

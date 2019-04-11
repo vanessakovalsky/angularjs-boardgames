@@ -1,0 +1,20 @@
+== TP 8 ==
+
+- On va Ajouter des tests à notre application
+-- Commençons par installer les outils nécessaires :
+npm install karma karma-jasmine jasmine-core karma-chrome-launcher --save-dev
+-- Puis installons l'outil en ligne de commande pour karma
+npm install -g karma-cli
+-- Puis les dépendances angular (angular mocks pour simuler les données)
+npm install angular-mocks --save-dev
+-- Initialiser le fichier de configuration avec la commande : karma init (/!\ ne fonctionne que dans l'invite de commande windows pas das gitbash)
+-- Créer un fichier liste.spec.js dans app/liste/
+-- Dans ce fichier nous allons déclarer notre premier test :
+describe('Liste jeux', function(){
+    it('has a dummy spec to test 2 + 2', function() {
+        // An intentionally failing test. No code within expect() will never equal 4.
+      expect().toEqual(4);
+    });
+});
+-- Ajouter le chemin du fichier dans le karma.conf.js dans la rubrique files
+- Lancer les tests avec karma start (dans l'invite de commande)
