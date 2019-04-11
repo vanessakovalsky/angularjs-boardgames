@@ -15,7 +15,12 @@ var app = angular.module("app",
         "affichageJeu"
     ]);
 
-    app.config(function($stateProvider) {
+    app.config(function($stateProvider, $urlRouterProvider) {
+        var homeState = {
+          name: 'app',
+          url: '/',
+          component: 'home'
+        }
         var helloState = {
           name: 'accueil',
           url: '/accueil',
@@ -66,6 +71,7 @@ var app = angular.module("app",
                     return game;
                 }
                 var jeu = getGame().$object;
+                console.log(jeu);
                 return jeu;
               }
             }
@@ -78,5 +84,9 @@ var app = angular.module("app",
         $stateProvider.state(creeruserState);
         $stateProvider.state(connexionState);
         $stateProvider.state(jeuState);
-
+        $stateProvider.state(homeState);
+        // the known route, with missing '/' - let's create alias
+        $urlRouterProvider.when('', '/');
+        // the unknown
+        $urlRouterProvider.otherwise('/404');
       });
