@@ -1,0 +1,24 @@
+<entete data="$ctrl.entete"></entete>
+<table id="liste-jeux" class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Jeu</th>
+            <th scope="col">Editeur</th>
+            <th scope="col">Catégorie</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer le jeu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="jeu in $ctrl.games">
+              <td>{{jeu.id}}</td>
+              <td> <a ui-sref="listejeux.jeu({ jeuId: jeu.id })">{{jeu.name}}</a></td>
+              <td>{{jeu.editor}}</td>
+              <td>Familiale</td>
+              <td><a href="creer_jeu.html?id=1">Modifier le jeu</a></td>
+              <td><a href="delete_jeu.html?id=1">Supprimer le jeu</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <ui-view></ui-view>

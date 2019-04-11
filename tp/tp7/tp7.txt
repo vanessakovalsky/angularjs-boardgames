@@ -1,0 +1,11 @@
+== TP 7 ==
+
+- On va refactoriser le code et créer un service
+-- Créer un nouveau module JeuService
+-- Ajouter un service qui permettra de faire les appels WS pour les données sur les jeux
+-- Déplacer les fonctions d'appel de liste, d'appel d'un jeu et d'envoi d'un jeu dans ce service
+-- Injecter ce service dans les controleurs dans lesquels vous avez besoin des données et supprimer les fonctions liées à l'appel de données
+- On va créer une directive pour répéter les lignes de tableaux de la liste de jeux
+-- Dans le liste.module.js déclarer une directive ayant pour nom trRow
+-- Dans cette déclaration, déclarer votre template '<tr><td></td></tr>'
+-- Dans liste.template.html, vous pouvez maintenant mettre un ng-repeat sur le tr avec un attribut tr-row correspondant à votre directive
